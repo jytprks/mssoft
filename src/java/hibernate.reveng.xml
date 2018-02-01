@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-reverse-engineering PUBLIC "-//Hibernate/Hibernate Reverse Engineering DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-reverse-engineering-3.0.dtd">
+<hibernate-reverse-engineering>
+    <schema-selection match-schema="Test"/>
+    <table-filter match-name="REGISTRATION_USER"/>
+    <table-filter match-name="SELLER_DETAILS"/>
+    <!--  <table-filter match-name="p_product_details"/>-->
+<!--    <table-filter match-name="W_PRODUCT_DETAILS"/>-->
+<!--    <table-filter match-name="B_PRODUCT_DETAILS"/>-->
+    <table-filter match-name="PRODUCT_DETAILS"/>
+     <!--<table-filter match-name="REGISTRATION_USER"/>-->
+     
+     <table-filter match-name="USER_PRODUCT_DETAILS"/>
+</hibernate-reverse-engineering>

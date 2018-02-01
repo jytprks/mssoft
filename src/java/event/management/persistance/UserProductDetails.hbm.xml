@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 3 Mar, 2016 3:49:27 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="event.management.persistance.UserProductDetails" table="USER_PRODUCT_DETAILS">
+        <composite-id name="id" class="event.management.persistance.UserProductDetailsId">
+            <key-property name="userName" type="string">
+                <column name="USER_NAME" length="50" />
+            </key-property>
+            <key-property name="userEmail" type="string">
+                <column name="USER_EMAIL" length="50" />
+            </key-property>
+            <key-property name="productId" type="string">
+                <column name="PRODUCT_ID" length="10" />
+            </key-property>
+        </composite-id>
+        <property name="status" type="string">
+            <column name="STATUS" length="3" not-null="true" />
+        </property>
+        <property name="bookDt" type="date">
+            <column name="BOOK_DT" length="7" not-null="true" />
+        </property>
+        <property name="productPrice" type="big_decimal">
+            <column name="PRODUCT_PRICE" precision="10" />
+        </property>
+        <property name="productName" type="string">
+            <column name="PRODUCT_NAME" length="50" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 3 Mar, 2016 3:49:27 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="event.management.persistance.SellerDetails" table="SELLER_DETAILS">
+        <composite-id name="id" class="event.management.persistance.SellerDetailsId">
+            <key-property name="emailId" type="string">
+                <column name="EMAIL_ID" length="50" />
+            </key-property>
+            <key-property name="userName" type="string">
+                <column name="USER_NAME" length="20" />
+            </key-property>
+        </composite-id>
+        <property name="fristName" type="string">
+            <column name="FRIST_NAME" length="50" not-null="true" />
+        </property>
+        <property name="lastName" type="string">
+            <column name="LAST_NAME" length="50" not-null="true" />
+        </property>
+        <property name="address" type="string">
+            <column name="ADDRESS" length="100" not-null="true" />
+        </property>
+        <property name="pinCode" type="string">
+            <column name="PIN_CODE" length="10" not-null="true" />
+        </property>
+        <property name="userPassword" type="string">
+            <column name="USER_PASSWORD" length="50" not-null="true" />
+        </property>
+        <property name="birthDay" type="date">
+            <column name="BIRTH_DAY" length="7" not-null="true" />
+        </property>
+        <property name="gender" type="string">
+            <column name="GENDER" length="5" not-null="true" />
+        </property>
+        <property name="mobileNo" type="string">
+            <column name="MOBILE_NO" length="10" not-null="true" />
+        </property>
+        <property name="logDt" type="date">
+            <column name="LOG_DT" length="7" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

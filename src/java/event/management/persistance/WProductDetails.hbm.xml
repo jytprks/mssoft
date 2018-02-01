@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 3 Mar, 2016 3:49:27 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="event.management.persistance.WProductDetails" table="W_PRODUCT_DETAILS" schema="HR">
+        <id name="productId" type="string">
+            <column name="PRODUCT_ID" length="10" />
+            <generator class="assigned"></generator>
+        </id>
+        <property name="productName" type="string">
+            <column name="PRODUCT_NAME" length="50" not-null="true" />
+        </property>
+        <property name="productPrice" type="big_decimal">
+            <column name="PRODUCT_PRICE" precision="10" not-null="true" />
+        </property>
+        <property name="productType" type="string">
+            <column name="PRODUCT_TYPE" length="15" not-null="true" />
+        </property>
+        <property name="productImage" type="byte[]">
+            <column name="PRODUCT_IMAGE" not-null="true" />
+        </property>
+        <property name="fileName" type="string">
+            <column name="FILE_NAME" length="50" />
+        </property>
+    </class>
+</hibernate-mapping>
